@@ -30,11 +30,3 @@ Guests should be able to leave a review for potential future guests to read.
 | Accept Bookings       | House Rules           |               |
 | Means of Contact      | Property Description  |               |
 | Connected Calendar    | Safety Info           |               |
-
-### DB Design
-
-Composed of:
-- Users (userID, firstname, lastname, email, number)
-- Properties (propertyID, number, streetname, postcode)
-- Bookings (bookingID, startdate, enddate, propertyID)
-- Booked (userID, bookingID)
