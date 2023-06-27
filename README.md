@@ -36,13 +36,59 @@ Guests should be able to leave a review for potential future guests to read.
 The client UI will be done with NextUI, a react library which allows you to build aesthetically pleasing, modern, and fast front-ends with limited design experience. This will allow users to browse different properties listed on the site, and view availability and price for their desired dates. 
 
 ### Routing
-Routing within the application for client side will be handled by a navbar created with the NextUI library alongside NextJS' file-system based Pages Router. Api routes will be handled by NextJS allowing me to fetch any data needed from the database such as booking or property information and communicate this to the clinet in a JSON response.
+Routing within the application for client-side will be handled by a navbar created with the NextUI library alongside NextJS' file-system-based Pages Router. API routes will also be handled by NextJS allowing me to fetch any data needed from the database such as booking or property information and communicate this to the client in a JSON response.
 
 ### Data Fetching
-where the data lives and how to get it.
+The data will live in a MySQL database due to it being a relational model, widely used and having excellent support alongside NextJS. Below is an example of how the DB schema will look.
+
+Accommodations:
+ID: Unique identifier for each accommodation listing.
+Title: Title or name of the accommodation.
+Description: Detailed description of the accommodation.
+Location: Address or geographical coordinates.
+Price: Pricing details, such as base rate and any additional charges.
+Amenities: List of amenities available in the accommodation (e.g., Wi-Fi, parking, swimming pool).
+Images: URLs or references to images showcasing the accommodation.
+Availability: Information about the availability of the accommodation, including date ranges, blocked dates, and reservations.
+HostID: Identifier of the host associated with the accommodation.
+Rating: Average rating or reviews received by the accommodation.
+
+Bookings:
+ID: Unique identifier for each booking.
+AccommodationID: Identifier of the booked accommodation.
+GuestID: Identifier of the guest making the booking.
+Check-in Date: Date when the guest intends to check in.
+Check-out Date: Date when the guest intends to check out.
+Total Price: Total price for the booking, including any additional charges or fees.
+Status: Current status of the booking (e.g., confirmed, canceled, completed).
+Payment Details: Information related to the payment transaction.
+Special Requests: Any specific requests or notes provided by the guest.
+
+Users:
+ID: Unique identifier for each user.
+Name: Name of the user.
+Email: Email address of the user (used for authentication and communication).
+Password: Securely hashed and salted password.
+Profile Picture: URL or reference to the user's profile picture.
+Role: Role or type of user (e.g., guest, host, administrator).
+
+Reviews:
+ID: Unique identifier for each review.
+AccommodationID: Identifier of the reviewed accommodation.
+GuestID: Identifier of the guest who left the review.
+Rating: Numeric rating given by the guest (e.g., on a scale of 1 to 5).
+Comment: Textual feedback or comment provided by the guest.
+
+Hosts:
+ID: Unique identifier for each host.
+Name: Name of the host.
+Email: Email address of the host (used for authentication and communication).
+Accommodations: A list of accommodations associated with the host.
 
 ### Rendering
-when and where I render static or dynamic content.
+For components such as the header, footer, logo and other parts that are common across all client sides they will be statically rendered. 
+
+The pages and components that contain specific property information or reviews, will be dynamically rendered once they have been pulled from the DB.
 
 ### Integrations
 what third-party services I use (CMS, auth, payments, etc) and how you connect to them.
