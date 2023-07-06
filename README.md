@@ -35,6 +35,10 @@ Users should be able to leave a review for their past bookings for other users t
 ### User Interface
 The client UI will be done with NextUI, a react library which allows you to build aesthetically pleasing, modern, and fast front-ends with limited design experience. This will allow users to browse different properties listed on the site, and view availability and price for their desired dates. 
 
+The flow of screens will look something like below.
+
+[![](https://mermaid.ink/img/pako:eNpNkk2OgzAMha9iZV0uwGKkltJfRqqG2YVZRMTQqCVBSWiF2t59UjAqWeXzs2w_Jw9WGoksZrUV7Rl-14WGcJY8U84rXTvIz-YOiXD4N0ornpk6Upow4bmqddS1xGt-sqZS1yk95d_onKjRUeA4lSbe8JUxlw9v-Un0DWoPeWkRpz67KQ0SoytlG-GVmcSMZyhuCAJ-8KbwTuE9X0oJYZ4Wre8peOCpVB4-Q5BjiKIvWJHHAZK5QotJ5jAqKRmfw6gcyfEAG7I7wJa8DrAjhwM8l5VHC86L_gnZvNqeTA1wmDc9sAVrMKxEyfCSj7dUMH_GBgsWh6sU9lKwQr9CXtdK4fG9AmNZ7G2HCyY6b_JelxOPOWslwqdoWFyJq8PXP7b5oLA?type=png)](https://mermaid.live/edit#pako:eNpNkk2OgzAMha9iZV0uwGKkltJfRqqG2YVZRMTQqCVBSWiF2t59UjAqWeXzs2w_Jw9WGoksZrUV7Rl-14WGcJY8U84rXTvIz-YOiXD4N0ornpk6Upow4bmqddS1xGt-sqZS1yk95d_onKjRUeA4lSbe8JUxlw9v-Un0DWoPeWkRpz67KQ0SoytlG-GVmcSMZyhuCAJ-8KbwTuE9X0oJYZ4Wre8peOCpVB4-Q5BjiKIvWJHHAZK5QotJ5jAqKRmfw6gcyfEAG7I7wJa8DrAjhwM8l5VHC86L_gnZvNqeTA1wmDc9sAVrMKxEyfCSj7dUMH_GBgsWh6sU9lKwQr9CXtdK4fG9AmNZ7G2HCyY6b_JelxOPOWslwqdoWFyJq8PXP7b5oLA)
+
 ### Routing
 Routing within the application for client-side will be handled by a navbar created with the NextUI library alongside NextJS' file-system-based Pages Router. API routes will also be handled by NextJS allowing me to fetch any data needed from the database such as booking or property information and communicate this to the client in a JSON response.
 
